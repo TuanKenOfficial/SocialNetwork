@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="200dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="15dp"
+    android:background="@drawable/bg_sender"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/nameTv"
+        android:text="Username"
+        android:visibility="gone"
+        android:layout_marginStart="5dp"
+        android:textColor="@color/colorUsername"
+        android:textStyle="bold"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/messageTv"
+        android:layout_below="@id/nameTv"
+        android:text="The message"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginStart="5dp"
+        android:textColor="@color/colorBlack"
+        android:textStyle="bold"/>
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_images"
+        android:id="@+id/messageIv"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="textEnd"
+        android:id="@+id/timeTv"
+        android:layout_below="@id/messageTv"
+        android:text="Time"
+        android:layout_marginEnd="5dp"
+        android:textSize="12sp"
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/colorBlack"
+        android:textStyle="bold"/>
+
+
+
+</LinearLayout>

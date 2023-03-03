@@ -1,0 +1,63 @@
+package com.example.socialnetword.Model;
+
+public class Notification {
+    private String userid;
+    private String text;
+    private String postid;
+    private String date;
+    private String time;
+    private boolean ispost;
+
+    public Notification(){
+    }
+
+
+    public Notification(String userid, String text, String postid,String date, String time, boolean ispost) {
+        this.userid = userid;
+        this.text = text;
+        this.postid = postid;
+        this.date = date;
+        this.time = time;
+        this.ispost = ispost;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public String getUserid() {
+        return userid;
+    }
+
+    public void setUserid(String userid) {
+        this.userid = userid;
+    }
+
+    public String getText() {
+        return text;
+    }
+
+    public void setText(String text) {
+        this.text = text;
+    }
+
+    public String getPostid() {
+        return postid;
+    }
+
+    public void setPostid(String postid) {
+        this.postid = postid;
+    }
+
+    public boolean isIspost() {
+        return ispost;
+    }
+
+    public void setIspost(boolean ispost) {
+        this.ispost = ispost;
+    }
+}

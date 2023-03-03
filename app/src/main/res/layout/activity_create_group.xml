@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateGroupActivity">
+
+
+    <com.blogspot.atifsoftwares.circularimageview.CircularImageView
+        android:id="@+id/groupIconIv"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/create_groups" />
+
+    <EditText
+        android:id="@+id/edt_grouptitle"
+        android:textColor="@color/colorUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/groupIconIv"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorWhite"
+        android:hint="Tên nhóm"
+        android:padding="10dp" />
+
+    <EditText
+        android:id="@+id/edt_groupdescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edt_grouptitle"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorWhite"
+        android:gravity="top"
+        android:hint="Mô tả nhóm"
+        android:textColor="@color/colorUsername"
+        android:inputType="textMultiLine|textCapSentences"
+        android:minHeight="200dp"
+        android:padding="10dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_done"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/createGroup"/>
+
+
+
+
+</RelativeLayout>

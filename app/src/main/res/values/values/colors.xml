@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#CA134F</color>
+    <color name="colorPrimaryKen">#370909</color>
+    <color name="colorAccent">#808080</color>
+    <color name="colorUsername">#00ff00</color>
+    <color name="colorFullname">#0000ff</color>
+    <color name="colorCountry">#808080</color>
+    <color name="colorLogin">#CA134F</color>
+    <color name="colorRegister">#ff4500</color>
+    <color name="colorEmail">#FF9800</color>
+    <color name="colorPassword">#FFEB3B</color>
+    <color name="colorBlack">#FF000000</color>
+    <color name="colorWhite">#FFFFFFFF</color>
+    <color name="windowBackground">#FFFFFF</color>
+
+</resources>

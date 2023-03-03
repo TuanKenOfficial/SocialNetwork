@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "825683776208",
+    "firebase_url": "https://socialnetwork-ded72-default-rtdb.firebaseio.com",
+    "project_id": "socialnetwork-ded72",
+    "storage_bucket": "socialnetwork-ded72.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:825683776208:android:482c7517ab3271418a84d5",
+        "android_client_info": {
+          "package_name": "com.example.socialnetword"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "825683776208-aldkvadumrhifig5rabfj6egftecns9q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNVmjXVKkbideRnb9LpjgKQzoV3ca4MiE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "825683776208-aldkvadumrhifig5rabfj6egftecns9q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

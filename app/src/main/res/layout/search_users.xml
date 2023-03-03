@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imageUsers"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/users" />
+
+    <TextView
+        android:id="@+id/txt_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:text="Tên"
+        android:layout_toRightOf="@id/imageUsers"
+        android:textColor="@color/colorUsername"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/txt_fullname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/txt_username"
+        android:text="Họ và tên"
+        android:layout_toRightOf="@id/imageUsers"
+        android:textColor="@color/colorFullname"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/txt_quocgia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Quốc gia"
+        android:layout_toRightOf="@id/imageUsers"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_below="@+id/txt_fullname"
+        android:textColor="@color/colorCountry"
+        android:textSize="18sp" />
+
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="8dp"
+        android:background="@drawable/button_background"
+        android:textColor="@color/colorPrimary" />
+
+
+</RelativeLayout>
+
+
+
+

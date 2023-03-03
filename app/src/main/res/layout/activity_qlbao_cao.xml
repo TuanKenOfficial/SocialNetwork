@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bar"
+        android:background="?android:attr/windowBackground">
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/toolbar"
+            android:background="?android:attr/windowBackground">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:text="Quản lý báo cáo"
+                    android:textColor="@color/colorUsername"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:layout_below="@id/bar">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@id/bar">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_reason"
+                android:layout_marginTop="10dp"
+                android:textColorHint="@color/colorBlack"
+                android:textSize="20sp"
+                android:hint="Lí do báo cáo"
+                android:layout_below="@id/bar"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_tieude"
+                android:layout_marginTop="10dp"
+                android:textColorHint="@color/colorBlack"
+                android:textSize="20sp"
+                android:hint="Bạn viết tiêu đề bức ảnh"
+                android:layout_below="@id/bar"/>
+
+            <ImageView
+                android:id="@+id/img_btnanh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_anhchao"
+                android:layout_alignParentStart="true"
+                android:minHeight="200dp"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/upload" />
+            <TextView
+                android:id="@+id/txt_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_btnanh"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/edittext_background"
+                android:gravity="center"
+                android:layout_gravity="start"
+                android:padding="10dp"
+                android:hint="Mời bạn viết mô tả bức ảnh"
+                android:inputType="textImeMultiLine"
+                android:textSize="20sp"
+                android:textColor="@color/colorEmail"
+                android:textColorHint="@color/colorBlack"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

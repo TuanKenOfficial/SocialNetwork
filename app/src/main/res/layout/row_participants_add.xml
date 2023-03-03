@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <ImageView
+            android:id="@+id/close"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/ic_back"
+            android:textSize="15sp" />
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imageUsers"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/users" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_toRightOf="@id/imageUsers">
+
+        <TextView
+            android:id="@+id/txt_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toRightOf="@id/imageUsers"
+            android:text="Username"
+            android:textColor="@color/colorUsername"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txt_quocgia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Quốc gia"
+            android:layout_toRightOf="@id/imageUsers"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_below="@+id/txt_username"
+            android:textColor="@color/colorCountry"
+            android:textSize="18sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_quocgia"
+            android:layout_toRightOf="@id/imageUsers"
+            android:layout_marginTop="5dp"
+            android:paddingTop="5dp"
+            android:id="@+id/statusTv"
+            android:text="Status"
+            android:textColor="@color/colorBlack"
+            android:layout_marginLeft="10dp"
+            android:maxLines="1"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
+
+
+
+

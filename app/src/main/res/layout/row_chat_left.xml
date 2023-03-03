@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="250dp"
+    android:layout_marginBottom="5dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="8dp"
+    android:id="@+id/messageLT">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/users" />
+
+        <TextView
+            android:id="@+id/txt_chat_time"
+            android:visibility="visible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_message"
+            android:layout_marginStart="2dp"
+            android:layout_toEndOf="@id/txt_seen"
+            android:text="23:00"
+            android:textColor="@color/colorBlack"
+            android:textSize="10sp" />
+        <TextView
+            android:id="@+id/txt_chat_date"
+            android:visibility="visible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_message"
+            android:layout_marginStart="3dp"
+            android:layout_toEndOf="@id/txt_chat_time"
+            android:text="23/04/2022"
+            android:textColor="@color/colorBlack"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/txt_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@id/profile_image"
+            android:background="@drawable/bg_receiver"
+            android:lineSpacingExtra="2dp"
+            android:paddingStart="20dp"
+            android:paddingTop="4dp"
+            android:paddingEnd="30dp"
+            android:paddingBottom="10dp"
+            android:text="Hi, How are you?"
+            android:visibility="gone"
+            android:textColor="@color/colorBlack"
+            android:textSize="14sp" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/img_message"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_below="@id/txt_message"
+            android:layout_toEndOf="@id/profile_image"
+            android:src="@drawable/ic_images"
+            app:riv_corner_radius="10dp" />
+
+        <TextView
+            android:id="@+id/txt_seen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_message"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="0dp"
+            android:layout_toEndOf="@id/profile_image"
+            android:text="Seen"
+            android:textColor="@color/colorBlack"
+            android:textSize="10sp" />
+
+</RelativeLayout>
