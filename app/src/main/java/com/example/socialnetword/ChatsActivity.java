@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.webkit.MimeTypeMap;
 import android.widget.EditText;
@@ -106,6 +107,8 @@ public class ChatsActivity extends AppCompatActivity {
     private String imageUrl = "" ;
     StorageTask uploadTask;
 
+    public static  final String TAG="CHAT";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -152,9 +155,6 @@ public class ChatsActivity extends AppCompatActivity {
         hisUid = intent.getStringExtra("hisUid"); // mới sửa
         fUser = FirebaseAuth.getInstance().getCurrentUser();
         myUid = fUser.getUid();
-
-
-
 
 
         //mới thêm
@@ -337,6 +337,7 @@ public class ChatsActivity extends AppCompatActivity {
                 Users user = dataSnapshot.getValue(Users.class);
                 if (notify){
                     sendNotification(hisUid, user.getUsername(),msg);
+                    Log.d(TAG, "onDataChange: SEND");
                 }
                 notify = false;
             }
@@ -400,12 +401,15 @@ public class ChatsActivity extends AppCompatActivity {
                     Data data = new Data(myUid, R.mipmap.ic_launcher, username+": "+message, "New Message", hisUid);
 
                     Sender sender = new Sender(data, token.getToken());
+                    Log.d(TAG, "onDataChange: "+data);
+                    Log.d(TAG, "onDataChange: "+sender);
 
                     apiService.sendNotification(sender).enqueue(new Callback<Response>() {
                         @Override
                         public void onResponse(Call<Response> call, retrofit2.Response<Response> response) {
                             if (response.code() == 200){
                                 if (response.body().success != 1){
+                                    Log.d(TAG, "onResponse: Failed");
                                     Toast.makeText(ChatsActivity.this, "Failed",Toast.LENGTH_SHORT).show();
                                 }
                             }

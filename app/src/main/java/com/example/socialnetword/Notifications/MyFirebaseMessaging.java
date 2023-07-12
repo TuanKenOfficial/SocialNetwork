@@ -1,5 +1,6 @@
 package com.example.socialnetword.Notifications;
 
+import android.annotation.SuppressLint;
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -45,6 +46,7 @@ public class MyFirebaseMessaging extends FirebaseMessagingService {
         }
     }
 
+    @SuppressLint("UnspecifiedImmutableFlag")
     private void sendOreoNotification(RemoteMessage remoteMessage){
         String user = remoteMessage.getData().get("user");
         String icon = remoteMessage.getData().get("icon");
@@ -58,7 +60,7 @@ public class MyFirebaseMessaging extends FirebaseMessagingService {
         bundle.putString("hisUid", user);
         intent.putExtras(bundle);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        PendingIntent pendingIntent = PendingIntent.getActivity(this, j, intent, PendingIntent.FLAG_ONE_SHOT);
+         PendingIntent pendingIntent = PendingIntent.getActivity(this, j, intent, PendingIntent.FLAG_ONE_SHOT);
         Uri defaultSound = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
 
         com.example.socialnetword.Notifications.OreoNotification oreoNotification = new com.example.socialnetword.Notifications.OreoNotification(this);
@@ -74,6 +76,7 @@ public class MyFirebaseMessaging extends FirebaseMessagingService {
 
     }
 
+    @SuppressLint("UnspecifiedImmutableFlag")
     private void sendNotification(RemoteMessage remoteMessage) {
 
         String user = remoteMessage.getData().get("user");
